@@ -1,0 +1,34 @@
+# Bachelor Expense Calculator
+
+print("Please enter the following details:\n")
+
+# Rent and Utility Inputs
+rent = float(input("Enter your hostel/flat rent: "))
+total_electricity_spend = float(input("\nEnter the total electricity spend (in units): "))
+charge_per_unit = float(input("\nEnter the charge per unit: "))
+total_electricity_bill = total_electricity_spend * charge_per_unit 
+chef_bill = float(input("\nEnter the chef bill: "))
+utility_bill = float(input("\nEnter the utility bill (Gas, Water, Wifi, Others): "))
+persons = int(input("\nEnter the number of persons living in the flat: "))
+
+
+# Calculate Each Person's Monthly Contribution
+total_monthly_expense = rent + total_electricity_bill + chef_bill + utility_bill
+amount_per_person = total_monthly_expense / persons
+print(f"\nEach person will pay per month = {amount_per_person:.2f}")
+
+
+# Meal and Personal Expenses Inputs for a Month
+per_meal_rate = float(input("\nEnter per meal rate: "))
+meal_numbers = float(input("\nEnter the number of meals you have: "))
+total_meal_cost = per_meal_rate * meal_numbers 
+pocket_money = float(input("\nMy pocket allowance per month: "))
+
+
+# Calculate Personal Total Monthly Expense
+personal_total_expense = total_meal_cost + pocket_money
+total_personal_expense = amount_per_person + personal_total_expense
+
+# Print Results
+print(f"\nMy personal meal cost in total = {total_meal_cost:.2f}")
+print(f"\nMy personal total expense for a month is = {total_personal_expense:.2f}")
